@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="recl_gerant" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.Recl_gerantController">
+   <children>
+      <ImageView fitHeight="342.0" fitWidth="333.0" layoutX="24.0" layoutY="34.0" opacity="0.8" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/hehe.png" />
+         </image>
+      </ImageView>
+      <JFXButton fx:id="consult_g" buttonType="RAISED" layoutX="329.0" layoutY="84.0" onAction="#consult_g_signal" prefHeight="62.0" prefWidth="258.0" ripplerFill="#c278c2" style="-fx-background-color: #504b50; -fx-background-radius: 5cm;" text="Consulter liste des reclamations">
+         <textFill>
+            <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+               <stops>
+                  <Stop color="WHITE" />
+                  <Stop color="ORANGE" offset="1.0" />
+               </stops>
+            </RadialGradient>
+         </textFill></JFXButton>
+      <JFXButton fx:id="envoyer_g" buttonType="RAISED" layoutX="352.0" layoutY="194.0" onAction="#envoyer_g_signal" prefHeight="52.0" prefWidth="213.0" ripplerFill="#c278c2" style="-fx-background-color: #504b50; -fx-background-radius: 5cm;" text="Envoyer un mail au administrateur">
+         <textFill>
+            <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+               <stops>
+                  <Stop color="WHITE" />
+                  <Stop color="ORANGE" offset="1.0" />
+               </stops>
+            </RadialGradient>
+         </textFill></JFXButton>
+      <JFXButton fx:id="retour_g" buttonType="RAISED" layoutX="390.0" layoutY="288.0" prefHeight="46.0" prefWidth="136.0" style="-fx-background-color: #504b50; -fx-background-radius: 5cm;" text="Retour">
+         <textFill>
+            <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+               <stops>
+                  <Stop color="WHITE" />
+                  <Stop color="ORANGE" offset="1.0" />
+               </stops>
+            </RadialGradient>
+         </textFill></JFXButton>
+      <Label layoutX="24.0" layoutY="24.0" prefHeight="30.0" prefWidth="362.0" text="Bienvenue dans l'espace réclamation">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+         <textFill>
+            <RadialGradient centerX="0.40555555555555556" centerY="0.5095238095238095" focusAngle="-99.12" radius="0.5">
+               <stops>
+                  <Stop color="WHITE" />
+                  <Stop color="ORANGE" offset="1.0" />
+               </stops>
+            </RadialGradient>
+         </textFill>
+         <effect>
+            <Glow level="0.6" />
+         </effect>
+      </Label>
+   </children>
+</AnchorPane>

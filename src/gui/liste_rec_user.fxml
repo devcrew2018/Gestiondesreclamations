@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.GaussianBlur?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="liste" prefHeight="561.0" prefWidth="994.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.Liste_rec_userController">
+   <children>
+      <ImageView fitHeight="124.0" fitWidth="140.0" layoutX="862.0" layoutY="8.0" opacity="0.8" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/hehe.png" />
+         </image>
+      </ImageView>
+      <TableView fx:id="tab_sujets" layoutX="20.0" layoutY="123.0" prefHeight="249.0" prefWidth="265.0" style="-fx-background-color: grey;">
+        <columns>
+          <TableColumn fx:id="sujet" prefWidth="264.0" text="Sujets" />
+        </columns>
+      </TableView>
+      <Label layoutX="20.0" layoutY="14.0" prefHeight="44.0" prefWidth="254.0" text="Mes réclamations">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+         <textFill>
+            <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+               <stops>
+                  <Stop color="WHITE" />
+                  <Stop color="ORANGE" offset="0.9965635738831615" />
+                  <Stop color="WHITE" offset="1.0" />
+               </stops>
+            </RadialGradient>
+         </textFill></Label>
+      <JFXButton fx:id="supp_rec" buttonType="RAISED" layoutX="596.0" layoutY="465.0" onAction="#supp_rec_signal" prefHeight="44.0" prefWidth="185.0" ripplerFill="#c278c2" style="-fx-background-color: #504b50; -fx-background-radius: 5cm;" text="Supprimer la réclamation">
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="WHITE" />
+                  <Stop color="ORANGE" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </textFill>
+         <font>
+            <Font size="13.0" />
+         </font></JFXButton>
+      <JFXButton fx:id="retour_inter3" buttonType="RAISED" layoutX="835.0" layoutY="465.0" onAction="#retour_inter3_signal" prefHeight="44.0" prefWidth="101.0" style="-fx-background-color: #504b50; -fx-background-radius: 5cm;" text="Retour">
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="WHITE" />
+                  <Stop color="ORANGE" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </textFill>
+         <font>
+            <Font size="13.0" />
+         </font></JFXButton>
+      <JFXButton fx:id="afficher_rec" buttonType="RAISED" layoutX="26.0" layoutY="465.0" onAction="#afficher_rec_signal" prefHeight="44.0" prefWidth="150.0" ripplerFill="#c278c2" style="-fx-background-color: #504b50; -fx-background-radius: 5cm;" text="Afficher les détails">
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="WHITE" />
+                  <Stop color="ORANGE" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </textFill>
+         <font>
+            <Font size="13.0" />
+         </font></JFXButton>
+      <JFXTextArea fx:id="rec_texte" focusColor="GREEN" layoutX="380.0" layoutY="176.0" prefHeight="169.0" prefWidth="312.0" style="-fx-text-fill: white;" unFocusColor="ORANGE">
+         <effect>
+            <Glow />
+         </effect></JFXTextArea>
+      <JFXTextArea fx:id="rep_user" focusColor="GREEN" layoutX="784.0" layoutY="176.0" prefHeight="157.0" prefWidth="185.0" style="-fx-text-fill: white;" unFocusColor="ORANGE">
+         <effect>
+            <Glow />
+         </effect></JFXTextArea>
+      <Label fx:id="lab2" layoutX="784.0" layoutY="137.0" prefHeight="34.0" prefWidth="207.0" style="-fx-text-fill: orange;" text="Réponse de l'administration">
+         <effect>
+            <Glow />
+         </effect></Label>
+      <Label fx:id="lab1" layoutX="380.0" layoutY="109.0" prefHeight="28.0" prefWidth="128.0" style="-fx-text-fill: orange;" text="Votre réclamation">
+         <effect>
+            <Glow />
+         </effect></Label>
+      <JFXButton fx:id="refresh" buttonType="RAISED" layoutX="26.0" layoutY="373.0" onAction="#refresh_signal" prefHeight="34.0" prefWidth="254.0" ripplerFill="#c278c2" style="-fx-background-color: #504b50; -fx-background-radius: 5cm;" text="rafraîchir la liste des sujets">
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="WHITE" />
+                  <Stop color="ORANGE" offset="0.9961685823754789" />
+                  <Stop color="#c278c2" offset="0.9965635738831615" />
+                  <Stop color="#c278c2" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </textFill>
+         <font>
+            <Font size="13.0" />
+         </font></JFXButton>
+      <JFXButton fx:id="modif_rec_user" buttonType="RAISED" layoutX="206.0" layoutY="465.0" onAction="#modif_rec_user_signal" prefHeight="44.0" prefWidth="159.0" style="-fx-background-color: #504b50; -fx-background-radius: 5cm;" text="Modifier la réclamation">
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="WHITE" />
+                  <Stop color="ORANGE" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </textFill>
+         <font>
+            <Font size="13.0" />
+         </font></JFXButton>
+      <JFXButton fx:id="valid_modif_user" buttonType="RAISED" layoutX="416.0" layoutY="465.0" onAction="#valid_modif_user_signal" prefHeight="44.0" prefWidth="150.0" style="-fx-background-color: #504b50; -fx-background-radius: 5cm;" text="Valider modification">
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="WHITE" />
+                  <Stop color="ORANGE" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </textFill>
+         <font>
+            <Font size="13.0" />
+         </font></JFXButton>
+      <Label fx:id="lab3" layoutX="548.0" layoutY="109.0" prefHeight="28.0" prefWidth="140.0" style="-fx-text-fill: orange;" text="Saisir Votre modification">
+         <effect>
+            <Glow />
+         </effect></Label>
+      <Label fx:id="remarque" layoutX="387.0" layoutY="356.0" prefHeight="34.0" prefWidth="321.0" style="-fx-text-fill: green;" text="vouz ne pouvez pas modifier une réclamation déja traitée!">
+         <effect>
+            <Glow />
+         </effect></Label>
+      <Separator layoutX="705.0" layoutY="132.0" orientation="VERTICAL" prefHeight="230.0" prefWidth="44.0">
+         <effect>
+            <Glow level="0.0">
+               <input>
+                  <ColorAdjust brightness="0.23" contrast="1.0" hue="0.31" saturation="0.44">
+                     <input>
+                        <GaussianBlur radius="1.97">
+                           <input>
+                              <DropShadow blurType="GAUSSIAN" color="#ff5500" height="139.48" radius="40.36" width="23.96" />
+                           </input>
+                        </GaussianBlur>
+                     </input>
+                  </ColorAdjust>
+               </input>
+            </Glow>
+         </effect>
+      </Separator>
+      <Separator layoutX="304.0" layoutY="140.0" orientation="VERTICAL" prefHeight="230.0" prefWidth="44.0">
+         <effect>
+            <Glow level="0.0">
+               <input>
+                  <ColorAdjust brightness="0.23" contrast="1.0" hue="0.31" saturation="0.44">
+                     <input>
+                        <GaussianBlur radius="1.97">
+                           <input>
+                              <DropShadow blurType="GAUSSIAN" color="#ff5500" height="139.48" radius="40.36" width="23.96" />
+                           </input>
+                        </GaussianBlur>
+                     </input>
+                  </ColorAdjust>
+               </input>
+            </Glow>
+         </effect>
+      </Separator>
+   </children>
+</AnchorPane>
